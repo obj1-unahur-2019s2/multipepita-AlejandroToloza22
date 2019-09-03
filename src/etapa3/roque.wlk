@@ -1,9 +1,15 @@
 /*
  * Copiar pepita.wlk y comidas.wlk desde etapa2
  */
-// import pepita.*
-// import comidas.*
+import pepita.*
+import comidas.*
 
 object roque {
-	method entrenar() { }  // implementar
+	var property pajaro
+	method entrenar() {
+		pajaro.volar(10)
+		pajaro.comer(alpiste, 300)
+		pajaro.volar(5)
+		pajaro.haceLoQueQuieras()
+	}  
 }
