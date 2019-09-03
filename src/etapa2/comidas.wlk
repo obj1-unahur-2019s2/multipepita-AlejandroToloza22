@@ -16,7 +16,7 @@ object bigMac {
  * el alcaucil da 20 joules por gramo
  */ 
 object alcaucil {
-	// completar
+	method energiaQueOtroga() { return 20 }
 }
 
 /*
