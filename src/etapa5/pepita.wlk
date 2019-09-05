@@ -14,8 +14,8 @@ object pepita {
 		if (lugar.destino() == noroesteArgentino.destino()) {
 		 energia += noroesteArgentino.energiaQueAporta(self) 
 		}
-		else{
+		else {
 			 energia += lugar.energiaQueAporta()
 		}
-	} 
+	}
 }

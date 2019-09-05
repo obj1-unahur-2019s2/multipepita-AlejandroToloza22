@@ -1,37 +1,35 @@
-import pepita.*
-
 object patagonia { 
-	var patagonia = 0
-	method destino() {
-		return patagonia
-	}
+	var property destino = 0
 	method energiaQueAporta() { 
 		return 30
 	}
 }
 
 object sierrasCordobesas {
-	var sierras = 1
-	method destino() {
-		return sierras
-	}
+	var property destino = 1
 	method energiaQueAporta() {
 		return 70
 	}
 }
 
 object noroesteArgentino {
-	var noroeste = 2
-	method destino() { return noroeste }
+	var property destino = 2
 	method energiaQueAporta(pajaro) {
 		return pajaro.energia() * 0.10
 	}
 }
 
 object marDelPlata {
-	var marDelPlata = 3
-	method destino() { return marDelPlata }
+	var property destino = 3
+	var temporadaAlta = 2
+	var temporadaBaja = 0
+	var temporada
 	method energiaQueAporta() {
-		return 80
+		if (temporada == temporadaBaja) {
+		   	temporada = temporadaAlta
+		   	return 80
+		}
+		else  temporada = temporadaBaja
+		return -20
 	}
 }
