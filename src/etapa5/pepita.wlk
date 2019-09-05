@@ -17,10 +17,10 @@ object sierrasCordobesas {
 }
 
 object pepita {
-	var energia = 0
+	var energia = 100
 	method energia() { return energia }
 	method comer(cosa, gramos) { energia += cosa.energiaPorGramo() * gramos }
 	method volarA(lugar){
-		return energia += lugar.energiaQueAporta() 
+		return energia += lugar.energiaQueAporta(self)
 	}
 }
