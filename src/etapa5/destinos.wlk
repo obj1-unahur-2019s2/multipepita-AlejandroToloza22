@@ -1,3 +1,11 @@
+import pepita.*
+
 object patagonia { 
-	method 
+	method energiaQueAporta() { return 30}
+}
+
+object sierrasCordobesas {
+	method energiaQueAporta() {
+		return 70
+	}
 }
