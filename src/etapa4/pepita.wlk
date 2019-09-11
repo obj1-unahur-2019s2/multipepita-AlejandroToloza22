@@ -2,28 +2,24 @@ import comidas.*
 
 
 object pepita {
-	var property estaFeliz = false
-	var energia = 0
-	method energia() { 
-		return energia
+	var property energia = 0
+	
+	method estaDebil() { 
+		return  energia<50
 	}
 	
 	method comer(cosa, gramos) { 
 		energia += cosa.energiaPorGramo() * gramos
 	}
 	
-	method volar(kms) { 
-		energia -= kms + 10
-	}
-	
-	method estaDebil() { 
-		return energia<50
-	}
-	
 	method estaFeliz() { 
 		return energia.between(500, 1000)
 	}
 	
+	
+	method volar(kms) { 
+		energia -= kms + 10
+	}
 	method cuantoQuiereVolar() { 
 		var cuanto = energia / 5
 		if (energia.between(300, 400)) { 

@@ -17,6 +17,9 @@ object roque {
 	method entrenarATodas(){
 		pupilas.forEach({ a => self.entrenar(a) })
 	}
+	method agregarAvesFelices() {
+		return avesFelices.add(pupilas.filter({e=> e.estaFeliz()}))
+	}
 	method entrenarAvesFelices() {
 		pupilas.filter({e => e.estaFeliz()}).forEach({e => self.entrenar(e)})
 	}
