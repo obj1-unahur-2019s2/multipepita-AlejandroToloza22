@@ -5,11 +5,17 @@ import pepita.*
 import comidas.*
 
 object roque {
-	var property pajaro
-	method entrenar() {
-		pajaro.volar(10)
-		pajaro.comer(alpiste, 300)
-		pajaro.volar(5)
-		pajaro.haceLoQueQuieras()
-	}  
+	var property pupilas = []
+	method agregarPupila(unAve) {
+		pupilas.add(unAve)
+	}
+	method entrenar(pupila) {
+		pupila.volar(10)
+		pupila.comer(alpiste, 300)
+		pupila.volar(5)
+		pupila.haceLoQueQuieras()
+	}
+	method entrenarATodas(){
+		pupilas.forEach({ a => self.entrenar(a) })
+	}
 }

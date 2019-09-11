@@ -1,6 +1,7 @@
 import comidas.*
 
 object pepon {
+	var property estaFeliz = true
 	var energia = 0
 	
 	method comer(comida, gramos) { 
@@ -14,6 +15,9 @@ object pepon {
 		self.volar(4)
 		self.comer(alcaucil, 2)
 	}   // implementar
+	method energia() {
+		return energia
+	}
 }
 
 // implementar el objeto entero, salvo haceLoQueQuieras que lo damos hecho
@@ -22,6 +26,7 @@ object pipa {
 	/*
 	 * cuando le dicen a pipa que haga lo que quiera, no hace nada
 	 */
+	 var property estaFeliz = true
 	 var kmsVolados=0
 	 var gramosAcumulados = 0
 	 method comer(comida, gramos) {

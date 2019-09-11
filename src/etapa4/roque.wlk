@@ -1,11 +1,23 @@
-/*
- * Copiar pepita.wlk y comidas.wlk desde etapa3
- */
-// import pepita.*
-// import comidas.*
 import masAves.*
+import pepita.*
+import comidas.*
 
 object roque {
-	method tuPupiloEs(ave) { } // implementar
-	method entrenar() { }  // implementar
+	var property pupilas = []
+	var property avesFelices = []
+	method agregarPupila(unAve) {
+		pupilas.add(unAve)
+	}
+	method entrenar(pupila) {
+		pupila.volar(10)
+		pupila.comer(alpiste, 300)
+		pupila.volar(5)
+		pupila.haceLoQueQuieras()
+	}
+	method entrenarATodas(){
+		pupilas.forEach({ a => self.entrenar(a) })
+	}
+	method entrenarAvesFelices() {
+		pupilas.filter({e => e.estaFeliz()}).forEach({e => self.entrenar(e)})
+	}
 }
